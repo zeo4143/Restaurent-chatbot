@@ -10,7 +10,7 @@ import Login from "./Components/Login";
 import { UserAuthCOntextProvider } from "./Context/UserAuthCOntextProvider";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Chatbot from "./Components/Chatbot/Chatbot";
-import ProtectedRouteForLogin from "./Components/ProtectedRouteForLOgin";
+import ProtectedRouteForLogin from "./Components/ProtectedRouteForLogin";
 
 export default function App() {
   const router = createBrowserRouter([
