@@ -4,7 +4,7 @@ export const data = [
       name: 'DoubleCheeseburger',
       type : "Veg",
       category: 'burger', 
-      addONs : [""],
+      addONs : ["No AddONs"],
       image:
         'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60',
       price: '80',
@@ -14,6 +14,7 @@ export const data = [
       name: 'BaconCheeseburger',
       type : "Veg",
       category: 'burger',
+      addONs : ["MayoDip"],
       image:
         'https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60',
       price: '$',
@@ -23,6 +24,7 @@ export const data = [
       name: 'MushroomBurger',
       type : "veg",
       category: 'burger',
+      addONs : ["TandooriDip"],
       image:
         'https://images.unsplash.com/photo-1608767221051-2b9d18f35a2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60',
       price: '$$',
