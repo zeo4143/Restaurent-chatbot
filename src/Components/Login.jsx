@@ -1,55 +1,53 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { useUserAuth } from "../Context/UserAuthCOntextProvider";
+import welcomeGif from "../assets/HomePage.gif";
 
 export default function Login() {
-
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-  const {Login, GsignIn, user} = useUserAuth()
-  const navigate = useNavigate()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { Login, GsignIn, user } = useUserAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError("")
+    e.preventDefault();
+    setError("");
 
     try {
-      await Login(email, password)
-      localStorage.setItem('user', user)
-      navigate("/")
-    } catch(err) {
-      setError(err)
+      await Login(email, password);
+      localStorage.setItem("user", user);
+      navigate("/");
+    } catch (err) {
+      setError(err);
       console.log(error);
-      alert("Something Went Wrong Make Sure your credentials are correct")
+      alert("Something Went Wrong Make Sure your credentials are correct");
     }
-  }
+  };
 
   const handleClick = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
-      await GsignIn()
-      navigate("/")
+      await GsignIn();
+      navigate("/");
     } catch (err) {
-      alert("Something Went Wrong")
+      alert("Something Went Wrong");
     }
-  }
-
-
+  };
 
   return (
     <div className="container">
       <div className="logoContainer">
         <center>
-          <h1>Momma Made. .</h1>
+          <h1>Tony</h1>
+          <p>
+            <small>The Virtual Assistant</small>
+          </p>
         </center>
-      </div>
-
-      <div>
-
+        <img src={welcomeGif} style={{ width: "200px" }} />
       </div>
 
       <div className="authContainer">
@@ -79,7 +77,7 @@ export default function Login() {
                 name="email"
                 autoComplete="off"
                 placeholder="Email address"
-                onChange={(e) => (setEmail(e.target.value))}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="email" className="input-label">
                 Email address
@@ -94,8 +92,7 @@ export default function Login() {
                 name="password"
                 autoComplete="off"
                 placeholder="Password"
-                onChange={(e) => (setPassword(e.target.value))}
-
+                onChange={(e) => setPassword(e.target.value)}
               />
               <label htmlFor="password" className="input-label">
                 Password
