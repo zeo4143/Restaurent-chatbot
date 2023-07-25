@@ -3,6 +3,9 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { AiFillApple } from "react-icons/ai";
 import { useUserAuth } from "../Context/UserAuthCOntextProvider";
+import welcomeGif from "../assets/HomePage.gif";
+
+
 
 export default function SignUp() {
 
@@ -29,8 +32,12 @@ export default function SignUp() {
     <div className="container">
       <section className="logoContainer">
         <center>
-          <h1>Momma Made. .</h1>
+          <h1>Tony</h1>
+          <p>
+            <small>The Virtual Assistant</small>
+          </p>
         </center>
+        <img src={welcomeGif} style={{ width: "200px" }} />
       </section>
 
       <section className="authContainer">
