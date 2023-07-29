@@ -26,12 +26,6 @@ export default function Chatbot() {
         buttons: ["Order Food", "Update Order", "Cancel Order", "Go to Cart"],
       },
     ]);
-    const cart = localStorage.getItem("cart");
-    const currentOrder = localStorage.getItem("currentOrder");
-    cart == null ? localStorage.setItem("cart", JSON.stringify([])) : "";
-    currentOrder == null
-      ? localStorage.setItem("currentOrder", JSON.stringify([]))
-      : "";
   }, []);
 
   useEffect(() => {
