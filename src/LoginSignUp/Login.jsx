@@ -19,6 +19,9 @@ export default function Login() {
     try {
       await Login(email, password);
       localStorage.setItem("user", user);
+      localStorage.setItem('cart', JSON.stringify([]))
+      localStorage.setItem('currentOrder', JSON.stringify([]))
+
       navigate("/");
     } catch (err) {
       setError(err);
